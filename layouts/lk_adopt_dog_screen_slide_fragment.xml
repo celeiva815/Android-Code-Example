@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="100dp"
+    sothree:umanoShadowHeight="5dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:gravity="center|top">
+
+        <ImageView
+            android:id="@+id/picture_adopt_dog_screen_slide_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:baselineAlignBottom="false" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/download_image_progressbar"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:focusableInTouchMode="false" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_adopt_dog_screen_slide_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/foundation_adopt_dog_screen_slide_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="@string/foundation_stuka"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="@dimen/laika_small_text" />
+
+                <TextView
+                    android:id="@+id/id_adopt_dog_screen_slide_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/relativeLayout2"
+                    android:layout_alignEnd="@+id/imageView3"
+                    android:layout_alignRight="@+id/imageView3"
+                    android:paddingLeft="5dp"
+                    android:text="ID: 1289391823"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="@dimen/laika_min_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/arrow_down" />
+
+            <TextView
+                android:id="@+id/match_adopt_dog_screen_slide_textview"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="2.5"
+                android:background="@drawable/lk_heart_image"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="#fff"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/status_postulated_adopt_dog_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/linearLayout2"
+                android:layout_alignEnd="@+id/match_adopt_dog_screen_slide_textview"
+                android:layout_alignRight="@+id/match_adopt_dog_screen_slide_textview"
+                android:drawableLeft="@drawable/yellow_circle"
+                android:paddingLeft="5dp"
+                android:text="En espera"
+                android:textColor="@color/light_black_font"
+                android:textSize="@dimen/laika_min_text" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView19"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Macho"
+                        android:id="@+id/gender_adopt_dog_screen_slide_textview"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/light_black_font"
+                        android:layout_toRightOf="@+id/imageView19"
+                        android:layout_toEndOf="@+id/imageView19"
+                        android:textSize="@dimen/laika_small_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView27"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mediano"
+                        android:id="@+id/size_adopt_dog_screen_slide_textview"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/light_black_font"
+                        android:layout_toRightOf="@+id/imageView27"
+                        android:layout_toEndOf="@+id/imageView27"
+                        android:textSize="@dimen/laika_small_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView28"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tranquilo"
+                        android:id="@+id/personality_adopt_dog_screen_slide_textview"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/light_black_font"
+                        android:layout_toRightOf="@+id/imageView28"
+                        android:layout_toEndOf="@+id/imageView28"
+                        android:textSize="@dimen/laika_small_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView29"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Con Chip"
+                        android:id="@+id/chip_adopt_dog_screen_slide_textview"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/light_black_font"
+                        android:layout_toRightOf="@+id/imageView29"
+                        android:layout_toEndOf="@+id/imageView29"
+                        android:textSize="@dimen/laika_small_text" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView25"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07-08-1991"
+                        android:id="@+id/years_adopt_dog_screen_slide_textview"
+                        android:textColor="@color/light_black_font"
+                        android:textSize="@dimen/laika_small_text"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView25"
+                        android:layout_toEndOf="@+id/imageView25" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView26"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mestizo"
+                        android:id="@+id/breed_dog_profile_textview"
+                        android:textColor="@color/light_black_font"
+                        android:textSize="@dimen/laika_small_text"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView26"
+                        android:layout_toEndOf="@+id/imageView26" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView20"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Esterilizado"
+                        android:id="@+id/sterilized_adopt_dog_screen_slide_textview"
+                        android:textColor="@color/light_black_font"
+                        android:textSize="@dimen/laika_small_text"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView20"
+                        android:layout_toEndOf="@+id/imageView20" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView22"
+                        android:src="@drawable/laika_album_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Entrenado"
+                        android:id="@+id/trained_adopt_dog_screen_slide_textview"
+                        android:textColor="@color/light_black_font"
+                        android:textSize="@dimen/laika_small_text"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView22"
+                        android:layout_toEndOf="@+id/imageView22" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/laika_red" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Conoce un poco más..."
+                    android:textColor="@color/laika_red"
+                    android:textSize="@dimen/laika_small_text" />
+
+                <TextView
+                    android:id="@+id/detail_adopt_dog_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView30"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/view_more_story_adopt_dog"
+                    android:textColor="@color/light_black_font" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/postulate_adopt_dog_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="@drawable/laika_button"
+                android:text="@string/postulate_adopt_dog"
+                android:textColor="@color/laika_dark_white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

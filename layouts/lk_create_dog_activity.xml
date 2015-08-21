@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp">
+
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginBottom="5dp"
+                android:text="@string/name_new_dog_register"
+                android:textColor="@color/laika_red"
+                />
+
+            <EditText
+                android:id="@+id/name_new_dog_register_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/laikatheme_edit_text_holo_light"
+                android:hint="@string/name_hint_new_dog_register"
+                android:inputType="textPersonName"
+                android:minHeight="30dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/light_black_font"
+                android:textSize="@dimen/laika_medium_text" />
+
+            <RadioGroup
+                android:id="@+id/gender_new_dog_register_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male_new_dog_register_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:onClick="setGenderRadioButtonClicked"
+                    android:text="@string/male_adopt_dog_form"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/female_new_dog_register_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:onClick="setGenderRadioButtonClicked"
+                    android:text="@string/female_adopt_dog_form"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/size_new_dog_register_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:text="@string/size_new_dog_register"
+                    android:textColor="@color/laika_red"
+                    />
+
+                <ImageView
+                    android:id="@+id/size_helper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center|left"
+                    android:src="@drawable/laika_question_grey" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/size_new_dog_register_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/type_new_dog_register_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginBottom="5dp"
+                android:text="@string/breed_new_dog_register"
+                android:textColor="@color/laika_red"
+                />
+
+            <Spinner
+                android:id="@+id/type_new_dog_register_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/birth_new_dog_register_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:text="@string/birth_new_dog_register"
+                    android:textColor="@color/laika_red"
+                    />
+
+                <ImageView
+                    android:id="@+id/birth_helper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center|left"
+                    android:src="@drawable/laika_question_grey" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/birth_new_dog_register_button"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/transparent"
+                android:padding="15dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/example_date_reminder"
+                android:textColor="@color/light_black_font"
+                android:textSize="@dimen/alarm_reminder_my_dog" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/personality_new_dog_register_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:text="@string/personality_new_dog_register"
+                android:textColor="@color/laika_red"
+                />
+
+                <ImageView
+                    android:id="@+id/personality_helper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center|left"
+                    android:src="@drawable/laika_question_grey" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/personality_new_dog_register_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|left"
+                android:layout_marginBottom="5dp"
+                android:text="@string/steralized_new_dog_register"
+                android:textColor="@color/laika_red"
+                />
+
+            <RadioGroup
+                android:id="@+id/sterilized_new_dog_register_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|left"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sterilized_new_dog_register_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:onClick="setSterilizedRadioButton"
+                    android:text="@string/yes_dialog"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/not_sterilized_new_dog_register_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:onClick="setSterilizedRadioButton"
+                    android:text="@string/no_dialog"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:text="@string/code_new_dog_register"
+                android:textColor="@color/laika_red"
+                />
+
+            <ImageView
+                android:id="@+id/chip_helper"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="center|left"
+                android:src="@drawable/laika_question_grey" />
+
+        </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/chip_new_dog_register_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|left"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/chip_new_dog_register_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:onClick="setChipRadioButtonClicked"
+                    android:text="@string/yes_dialog"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/not_chip_new_dog_register_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:onClick="setChipRadioButtonClicked"
+                    android:text="@string/no_dialog"
+                    android:textColor="@color/light_black_font"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/chip_code_new_dog_register_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/laikatheme_edit_text_holo_light"
+                android:hint="@string/chip_hint_new_dog_register"
+                android:minHeight="30dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/light_black_font"
+                android:textColorHint="@color/darker_white_font"
+                android:textSize="@dimen/laika_medium_text"
+                android:visibility="gone"
+                android:inputType="phone"/>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|left"
+                android:layout_marginBottom="5dp"
+                android:text="@string/picture_new_dog_register"
+                android:textColor="@color/laika_red"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/picture_create_dog_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/note32" />
+
+                <ProgressBar
+                    android:id="@+id/download_image_progressbar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:focusableInTouchMode="false"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add_dog_new_dog_register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/laika_button"
+                android:text="@string/add_new_dog_register"
+                android:textColor="@color/laika_dark_white"
+                android:textSize="@dimen/laika_big_text" />
+
+            <ProgressBar
+                android:id="@+id/new_dog_progressbar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
